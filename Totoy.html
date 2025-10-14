@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pemesanan Produk</title>
+  <link rel="stylesheet" href="totoy.css">
+</head>
+<body>
+  <header>
+    <h1>Form Pemesanan Produk</h1>
+    <p>Pilih produk favorit Anda dan isi data pemesanan di bawah ini.</p>
+  </header>
+
+  <section class="produk-list">
+    <div class="produk">
+      <img src="Laptop-Gaming-Murah-Lenovo-LOQ-15IAX9I.jpg" alt="Laptop Gaming">
+      <h3>Laptop Gaming Pro</h3>
+      <p>Performa tinggi untuk gamer sejati.</p>
+    </div>
+    <div class="produk">
+      <img src="kamera dslr.jpeg" alt="Kamera DSLR">
+      <h3>Kamera DSLR ProShot</h3>
+      <p>Hasil jernih dan tajam di setiap momen.</p>
+    </div>
+    <div class="produk">
+      <img src="samsung ultra.jpeg" alt="Smartphone 5G">
+      <h3>Smartphone 5G Ultra</h3>
+      <p>Koneksi cepat dan layar super jernih.</p>
+    </div>
+    <div class="produk">
+      <img src="headphone.png" alt="Headphone Wireless">
+      <h3>Headphone Wireless</h3>
+      <p>Suara jernih tanpa kabel yang mengganggu.</p>
+    </div>
+  </section>
+
+  <section class="form-section">
+    <form action="totoy1.html" method="GET">
+      <h2>Isi Data Pemesanan</h2>
+      <label for="nama">Nama Lengkap:</label>
+      <input type="text" id="nama" name="nama" required>
+
+      <label for="produk">Pilih Produk:</label>
+      <select id="produk" name="produk" required>
+        <option value="">-- Pilih Produk --</option>
+        <option value="Laptop Gaming Pro">Laptop Gaming Pro</option>
+        <option value="Kamera DSLR ProShot">Kamera DSLR ProShot</option>
+        <option value="Smartphone 5G Ultra">Smartphone 5G Ultra</option>
+        <option value="Headphone Wireless">Headphone Wireless</option>
+      </select>
+
+      <label for="jumlah">Jumlah:</label>
+      <input type="number" id="jumlah" name="jumlah" min="1" required>
+
+      <label for="alamat">Alamat Pengiriman:</label>
+      <textarea id="alamat" name="alamat" required></textarea>
+
+      <button type="submit">Kirim Pesanan</button>
+    </form>
+  </section>
+</body>
+</html>
