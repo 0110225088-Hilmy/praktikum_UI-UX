@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Diri - Nama Anda (Versi Modern)</title>
+    <!-- Memuat Tailwind CSS untuk styling modern dan responsif -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Mengatur font default Inter */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700;900&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f4f8; /* Biru muda/abu-abu terang */
+        }
+        /* Custom styling untuk rasio aspek video responsif */
+        .video-responsive {
+            overflow: hidden;
+            padding-bottom: 56.25%; /* 16:9 ratio */
+            position: relative;
+            height: 0;
+            border-radius: 0.75rem; /* Lebih bulat */
+        }
+        .video-responsive iframe {
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            border: none;
+        }
+        /* Styling untuk foto galeri agar responsif */
+        .gallery-item {
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+            width: 100%;
+            height: auto;
+            transition: transform 0.3s ease;
+        }
+        .gallery-item:hover {
+            transform: scale(1.05); /* Efek hover baru */
+        }
+    </style>
+</head>
+<body class="antialiased text-gray-800">
+
+    <!-- Header Baru: Lebih fokus dan bersih dengan warna Teal -->
+    <header class="bg-teal-600 shadow-xl text-white p-6 md:p-12">
+        <div class="max-w-7xl mx-auto flex flex-col items-center text-center">
+            <!-- f. Foto Diri (diangkat ke header agar lebih menonjol) -->
+            <img src="fotoprofil.jpeg"
+                 alt="Foto Profil Diri"
+                 class="w-32 h-32 md:w-40 md:h-40 rounded-full border-4 border-white shadow-2xl mb-4 transform transition duration-500 hover:scale-105">
+            <h1 class="text-4xl md:text-6xl font-black tracking-tighter">Abdul Basith Hilmy</h1>
+            <p class="mt-2 text-teal-200 text-xl font-light">Mahasiswa | STT Nurul Fikri</p>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto p-4 md:p-10 space-y-12 -mt-10"> <!-- Diangkat sedikit untuk menutupi bagian header -->
+
+        <!-- h. Deskripsi Diri (2 Paragraf) - Tampilan Card Baru -->
+        <section class="bg-white p-8 md:p-10 rounded-3xl shadow-2xl border-t-4 border-teal-500 relative" id="deskripsi">
+            <h2 class="text-3xl font-extrabold mb-6 text-teal-700">Tentang Saya</h2>
+            
+            <p class="mb-5 text-lg leading-relaxed text-gray-700">
+                Saya adalah Mahasiswa di STT Nurul Fikri. Alasan saya masuk ke STT NF karna seiring berkembangnya zaman yang semakin Modern ini, saya ingin mempelajari Ilmu Komputer atau yang sering di sebut IT untuk masa depan nanti.
+            </p>
+            <p class="text-lg leading-relaxed text-gray-700">
+                Di luar kuliah, saya senang menghabiskan waktu dengan berkumpul dengan teman. Dengan berkumpulnya dengan teman ini saya dapat banyak bercerita, mendengar, berdiskusi, berbagi pengetahuan serta banyak hal-hal lainnya. Saya percaya bahwa keseimbangan antara kehidupan profesional dan pribadi adalah kunci untuk inovasi berkelanjutan dan kinerja optimal.
+            </p>
+        </section>
+
+        <!-- g. Biodata Lengkap - Card Tampilan Ringkas -->
+        <section class="bg-white p-8 md:p-10 rounded-3xl shadow-xl" id="biodata">
+            <h2 class="text-3xl font-bold mb-6 text-teal-700 border-b pb-3">Detail Pribadi</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 text-base">
+                
+                <div class="p-4 bg-gray-50 rounded-lg shadow-inner">
+                    <p class="text-sm font-semibold text-teal-500 mb-1">Nama Lengkap:</p>
+                    <p class="font-bold text-gray-800">Abdul Basith Hilmy</p>
+                </div>
+                
+                <div class="p-4 bg-gray-50 rounded-lg shadow-inner">
+                    <p class="text-sm font-semibold text-teal-500 mb-1">Tanggal Lahir:</p>
+                    <p class="font-bold text-gray-800">12 Februari 2006</p>
+                </div>
+                
+                <div class="p-4 bg-gray-50 rounded-lg shadow-inner">
+                    <p class="text-sm font-semibold text-teal-500 mb-1">Pendidikan:</p>
+                    <p class="font-bold text-gray-800">Mahasiswa</p>
+                </div>
+              
+              <div class="p-4 bg-gray-50 rounded-lg shadow-inner">
+                    <p class="text-sm font-semibold text-teal-500 mb-1">Prodi:</p>
+                    <p class="font-bold text-gray-800">Teknik Informatika</p>
+                </div>
+
+                <div class="p-4 bg-gray-50 rounded-lg shadow-inner">
+                    <p class="text-sm font-semibold text-teal-500 mb-1">Email:</p>
+                    <p class="font-bold text-gray-800"><a href="mailto:abdulbasithhilmy12@gmail.com" class="text-teal-600 hover:text-teal-800 transition">abdulbasithhilmy12@gmail.com</a></p>
+                </div>
+                
+                <div class="p-4 bg-gray-50 rounded-lg shadow-inner">
+                    <p class="text-sm font-semibold text-teal-500 mb-1">Lokasi:</p>
+                    <p class="font-bold text-gray-800">Bogor, Indonesia</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- i. Konten Multimedia: Video dan Koleksi Foto -->
+        <section class="space-y-8" id="multimedia">
+            <h2 class="text-3xl font-extrabold text-teal-700 border-b pb-3">Galeri & Multimedia</h2>
+
+            <!-- Video (Menggunakan Iframe untuk Embed YouTube) -->
+            <div class="bg-white p-6 md:p-8 rounded-3xl shadow-xl">
+                <h3 class="text-2xl font-semibold mb-4 text-gray-700">Video Dokumentasi Proyek (Menggunakan IFRAME)</h3>
+                <div class="video-responsive">
+                    <!-- Iframe untuk embed video -->
+                    <iframe 
+                        src="https://www.youtube.com/embed/g-tTjGVuCC4?si=7V9fcAp5VxaFvCSB" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen 
+                        title="Video Placeholder Proyek">
+                    </iframe>
+                </div>
+                <p class="mt-4 text-sm text-gray-500 italic text-center">Lirik lagu: nanti kita seperti ini  &lt;iframe&gt;.</p>
+            </div>
+
+            <!-- Koleksi Foto (Galeri) -->
+            <div class="bg-white p-6 md:p-8 rounded-3xl shadow-xl">
+                <h3 class="text-2xl font-semibold mb-4 text-gray-700">Foto Kegiatan</h3>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <!-- Tambahkan shadow dan efek transisi baru -->
+                    <img src="foto1.jpeg" alt="Foto Kegiatan 1" class="gallery-item rounded-xl shadow-lg cursor-pointer">
+                    <img src="foto2.jpeg" alt="Foto Kegiatan 2" class="gallery-item rounded-xl shadow-lg cursor-pointer">
+                    <img src="foto3.jpeg" alt="Foto Kegiatan 3" class="gallery-item rounded-xl shadow-lg cursor-pointer">
+                    <img src="foto4.jpeg" alt="Foto Kegiatan 4" class="gallery-item rounded-xl shadow-lg cursor-pointer">
+                </div>
+            </div>
+        </section>
+        
+        <!-- Lokasi dan Download - Dibuat menjadi 2 kolom responsif -->
+        <section class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            
+            <!-- Lokasi (Iframe Tambahan) -->
+            <div class="bg-white p-6 md:p-8 rounded-3xl shadow-xl">
+                <h3 class="text-2xl font-semibold mb-4 text-gray-700">Lokasi (Iframe Peta)</h3>
+                <div class="w-full h-64 rounded-xl overflow-hidden shadow-inner">
+                    <!-- Iframe Peta -->
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3964.2401771741625!2d106.78383507362567!3d-6.49124299350081!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNsKwMjknMjguNSJTIDEwNsKwNDcnMTEuMSJF!5e0!3m2!1sen!2sid!4v1761061280956!5m2!1sen!2sid"
+                        width="100%"
+                        height="100%"
+                        style="border:0;"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="Embedded Google Map of Monas, Jakarta">
+                    </iframe>
+                </div>
+            </div>
+
+            <!-- j. Link Download File -->
+            <div class="bg-teal-500 p-6 md:p-8 rounded-3xl shadow-2xl text-white flex flex-col justify-center items-center text-center" id="download">
+                <h2 class="text-2xl font-bold mb-3">Dokumen Portofolio (CV)</h2>
+                <p class="text-lg mb-6 text-teal-100">Dapatkan versi PDF terbaru dari riwayat profesional saya.</p>
+                
+                <!-- Tombol Download Baru: Lebih besar, efek gelombang -->
+                <a href="https://example.com/file/portofolio-saya.pdf" 
+                   download="Portofolio_Joko_Santoso.pdf"
+                   class="inline-flex items-center justify-center px-10 py-4 border border-white text-lg font-semibold rounded-full text-teal-900 bg-white hover:bg-teal-100 shadow-xl transition duration-300 ease-in-out transform hover:scale-105">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                    </svg>
+                    UNDUH FILE PDF
+                </a>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Footer Baru: Warna gelap elegan -->
+    <footer class="bg-gray-900 text-white p-6 mt-12">
+        <div class="max-w-7xl mx-auto text-center">
+            <p class="text-gray-400 text-sm">&copy; 2025 Joko Santoso. | Didesain Ulang dengan Tailwind CSS.</p>
+            <nav class="mt-2 space-x-4 text-sm">
+                <a href="#deskripsi" class="hover:text-teal-400 transition duration-150">Tentang</a>
+                <span class="text-gray-700">|</span>
+                <a href="#biodata" class="hover:text-teal-400 transition duration-150">Detail</a>
+                <span class="text-gray-700">|</span>
+                <a href="#multimedia" class="hover:text-teal-400 transition duration-150">Galeri</a>
+            </nav>
+        </div>
+    </footer>
+
+</body>
+</html>
