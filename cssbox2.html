@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cssbox2</title>
+    <style>
+        .box1 {
+            background-color: #fff200;
+            width: 100%;
+            height: 155px;
+            border: 4px solid black;
+        }
+        .box2 {
+            background-color: #212166;
+            width: 20%;
+            height: 210px;
+            border: 4px solid black;
+        }
+        .box3 {
+            background-color: #654b4b;
+            width: 78%;
+            height:210px ;
+            border: 4px solid black;
+        }
+        .box4 {
+            background-color: #74d5ff;
+            width: 20%;
+            height: 200px;
+            border: 4px solid black;
+        }
+        .box5 {
+            background-color: hsl(0, 91%, 60%);
+            width: 78%;
+            height: 200px;
+            border: 4px solid black;
+
+        }
+        .container-box2 {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .container-box3 {
+            display: flex;
+            justify-content: space-between;
+        }
+        .container-box1 {
+            margin-bottom: 20px;
+            padding-top: 20px;
+        }
+        .container {
+            padding-right: 20px;
+            padding-left: 15px;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="container-box1">
+            <div class="box1"></div>
+        </div>
+        <div class="container-box2">
+            <div class="box2"></div>
+            <div class="box3"></div>
+        </div>
+        <div class="container-box3">
+            <div class="box4"></div>
+            <div class="box5"></div>
+        </div>
+    </div>
+</body>
+</html>
