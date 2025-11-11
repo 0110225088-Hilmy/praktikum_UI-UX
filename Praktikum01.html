@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Abdul Basith Hilmy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        /* ====== RESET & FONT ====== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #f3f4f6;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* ====== HEADER ====== */
+        header {
+            background: linear-gradient(135deg, #007bff, #00b4d8);
+            color: white;
+            text-align: center;
+            padding: 2.5rem 1rem 3rem 1rem;
+            border-bottom-left-radius: 60px;
+            border-bottom-right-radius: 60px;
+            position: relative;
+        }
+
+        .profile-photo {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            border: 4px solid white;
+            object-fit: cover;
+            margin-bottom: 1rem;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+        }
+
+        header h1 {
+            font-size: 2rem;
+            font-weight: 600;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        /* ====== SECTION STYLE ====== */
+        section {
+            background: white;
+            margin: 1.5rem auto;
+            padding: 1.5rem;
+            border-radius: 15px;
+            max-width: 700px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+            transition: 0.3s;
+        }
+
+        h2 {
+            color: #007bff;
+            margin-bottom: 1rem;
+            border-left: 5px solid #007bff;
+            padding-left: 10px;
+            font-size: 1.3rem;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        ul li::before {
+            content: "• ";
+            color: #007bff;
+            font-weight: bold;
+        }
+
+        #kontak p {
+            margin: 0.5rem 0;
+        }
+
+        #kontak a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        #kontak a:hover {
+            text-decoration: underline;
+        }
+
+        /* ====== HOVER EFFECT ====== */
+        section:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        /* ====== RESPONSIVE ====== */
+        @media (max-width: 600px) {
+            header {
+                padding: 2rem 1rem 2.5rem 1rem;
+            }
+
+            .profile-photo {
+                width: 100px;
+                height: 100px;
+            }
+
+            header h1 {
+                font-size: 1.6rem;
+            }
+
+            section {
+                margin: 1rem;
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <!-- Ganti src dengan foto kamu -->
+        <img src="totoy.jpg" alt="Foto Profil" class="profile-photo">
+        <h1>Abdul Basith Hilmy</h1>
+        <p>Mahasiswa | CV </p>
+    </header>
+
+    <section id="profil">
+        <h2>Profil Singkat</h2>
+        <p>Saya adalah seseorang yang tertarik dengan majunya teknologi, walau belum terlalu menguasai teknologi, saya akan berusaha menguasai semuanya.</p>
+    </section>
+
+    <section id="pendidikan">
+        <h2>Pendidikan</h2>
+        <ul>
+            <li>SMP Negeri 1 Bojong Gede (2018-2021)</li>
+            <li>SMA Negeri 1 Bojong Gede (2021-2024)</li>
+            <li>Mahasiswa STT Terpadu Nurul Fikri (2025-Skrg)</li>
+        </ul>
+    </section>
+
+    <section id="keahlian">
+        <h2>Keahlian</h2>
+        <ul>
+            <li>Gamer</li>
+            <li>Memilih makanan yang enak 😋</li>
+        </ul>
+    </section>
+
+    <section id="kontak">
+        <h2>Kontak</h2>
+        <p>📧 Email: <a href="mailto:abdulbasithhilmy12@gmail.com">abdulbasithhilmy12@gmail.com</a></p>
+        <p>📸 Instagram: <a href="https://www.instagram.com/hlmy.v" target="_blank">@hlmy.v</a></p>
+    </section>
+</body>
+
+</html>
