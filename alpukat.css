@@ -1,0 +1,194 @@
+/* Reset dan Dasar */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f9f7; /* Warna latar belakang ringan */
+    color: #333; /* Warna teks utama */
+}
+
+/* Container utama untuk membatasi lebar konten */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff; /* Latar belakang konten putih */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Bayangan lembut */
+}
+
+/* Header */
+h1 {
+    text-align: center;
+    color: #4a7c59; /* Hijau alpukat */
+    padding: 20px 0;
+    margin-bottom: 0;
+    font-size: 2.5em;
+    border-bottom: 3px solid #b7d7a8;
+}
+
+h2 {
+    color: #6a9955;
+    text-align: center;
+    margin-top: 30px;
+}
+
+h3 {
+    color: #8c8c8c;
+    border-left: 5px solid #a8c88f;
+    padding-left: 10px;
+    margin-top: 25px;
+}
+
+/* Paragraf dan Teks */
+p {
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+/* Gambar */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block; /* Agar bisa menggunakan margin: auto */
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Daftar Khasiat */
+ol {
+    list-style-type: none; /* Hapus bullet/nomor default */
+    padding: 0;
+    margin: 20px 0;
+}
+
+ol li {
+    background-color: #e9f5e9; /* Latar belakang item daftar */
+    margin-bottom: 8px;
+    padding: 10px;
+    border-left: 4px solid #4a7c59;
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+/* Bagian Foto Varian Alpukat */
+.foto {
+    display: flex; /* Menggunakan Flexbox untuk tata letak horizontal */
+    justify-content: space-around; /* Jarak antar item */
+    flex-wrap: wrap; /* Izinkan pindah baris pada layar kecil */
+    gap: 15px; /* Jarak antar gambar */
+    padding: 20px 0;
+    border-top: 1px dashed #ccc;
+    border-bottom: 1px dashed #ccc;
+    margin-top: 30px;
+}
+
+.foto img {
+    width: 200px; /* Lebar tetap untuk setiap gambar */
+    height: 150px; /* Tinggi tetap */
+    object-fit: cover; /* Memastikan gambar menutupi area tanpa terdistorsi */
+    margin: 0; /* Hapus margin auto dari gambar umum */
+    border: 3px solid #4a7c59;
+    transition: transform 0.3s;
+}
+
+.foto img:hover {
+    transform: scale(1.05); /* Efek zoom saat hover */
+}
+
+/* Bagian Promo */
+.promo {
+    background-color: #fff9e6; /* Latar belakang kuning muda */
+    border: 2px dashed #ffc107;
+    padding: 25px;
+    text-align: center;
+    margin: 30px 0;
+    border-radius: 10px;
+}
+
+.promo h2 {
+    color: #e04e1c; /* Merah untuk menarik perhatian */
+    font-size: 2em;
+}
+
+.promo h3 {
+    color: #333;
+    font-size: 1.5em;
+    border-left: none;
+}
+
+.promo del {
+    color: #d9534f;
+    font-size: 0.9em;
+}
+
+.promo strong {
+    color: #4a7c59;
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+/* Bagian COD/Pengiriman */
+.cod {
+    background-color: #a8c88f; /* Hijau cerah */
+    color: #333;
+    padding: 15px;
+    text-align: center;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.cod p {
+    margin: 5px 0;
+    line-height: 1.4;
+}
+
+/* Tombol PESAN SEKARANG */
+#tombol {
+    display: block;
+    width: 80%; /* Lebar tombol */
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 15px 30px;
+    background-color: #e04e1c; /* Warna tombol yang menonjol */
+    color: white;
+    font-size: 1.2em;
+    font-weight: bold;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+}
+
+#tombol:hover {
+    background-color: #c74318;
+    transform: translateY(-2px); /* Efek sedikit terangkat saat hover */
+}
+
+/* Media Queries untuk responsif */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+    h1 {
+        font-size: 2em;
+    }
+    .foto img {
+        width: 45%; /* Dua gambar per baris */
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .foto {
+        flex-direction: column; /* Satu gambar per baris */
+        align-items: center;
+    }
+    .foto img {
+        width: 90%;
+        height: 200px;
+    }
+}
